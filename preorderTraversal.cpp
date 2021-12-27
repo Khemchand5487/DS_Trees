@@ -67,7 +67,10 @@ int main()
     root->right->left = new Node(10);
     //END
     
-    //preorder traversal
+    //iterative approach
+    preorder_itr(root);
+    
+    //preorder traversal using recursion
     preorder(root);
 }
 
