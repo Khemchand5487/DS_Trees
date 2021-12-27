@@ -1,4 +1,4 @@
-//postorder traversal of a tree using recursion in c++
+//postorder traversal of a binary tree using recursion in c++
 
 #include <bits/stdc++.h>
 
