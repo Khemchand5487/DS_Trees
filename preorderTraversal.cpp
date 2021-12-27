@@ -27,6 +27,31 @@ void preorder(Node *root)
     preorder(root->right); //traversing right subtree
 }
 
+//iterative approach for preorder traversal
+void preorder_itr(Node* root)
+{
+    vector<int> res;
+    if(root == NULL) return;
+    
+    stack<Node*> st;
+    st.push(root);
+    
+    while(!st.empty())
+    {
+        root = st.top();
+        st.pop();
+        res.push_back(root->data);
+        if(root->right) st.push(root->right);
+        if(root->left) st.push(root->left);
+    }
+
+    for(int i: res)
+    {
+        cout<<i<<" ";
+    }
+    cout<<"\n";
+}
+
 int main()
 {
     //creating a tree
