@@ -1,4 +1,4 @@
-//preorder traversal of a tree in c++
+//preorder traversal of a binary tree using recursion in c++
 
 #include <bits/stdc++.h>
 
