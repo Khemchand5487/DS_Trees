@@ -1,4 +1,4 @@
-//inorder traversal of a tree using recursion in c++
+//postorder traversal of a tree using recursion in c++
 
 #include <bits/stdc++.h>
 
@@ -16,14 +16,14 @@ struct Node
     }
 };
 
-//inorder(Left Root Right) traversal of binary tree 
-void inorder(Node *root)
+//postorder(Left Right Root) traversal of binary tree 
+void postorder(Node *root)
 {
     if(root==NULL) return;
     
-    inorder(root->left); //traversing left subtree
+    postorder(root->left); //traversing left subtree
+    postorder(root->right); //traversing right subtree
     cout<<root->data<<" "; //printing root node
-    inorder(root->right); //traversing right subtree
 }
 
 int main()
@@ -41,7 +41,7 @@ int main()
     root->right->left = new Node(10);
     //END
     
-    inorder(root);
+    postorder(root);
 }
 
 /*
