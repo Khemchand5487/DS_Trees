@@ -1,4 +1,4 @@
-//inorder traversal of a tree using recursion in c++
+//inorder traversal of a binary tree in c++
 
 #include <bits/stdc++.h>
 
@@ -26,6 +26,37 @@ void inorder(Node *root)
     inorder(root->right); //traversing right subtree
 }
 
+void inorder_itr(Node* root)
+{
+    vector<int> res;
+    if(root==NULL) return;
+    
+    stack<Node*> st;
+    Node* node = root;
+    while(true)
+    {
+        if(node!=NULL)
+        {
+            st.push(node);
+            node = node->left;
+        }
+        else
+        {
+            if(st.empty()) break;
+            node = st.top();
+            st.pop();
+            res.push_back(node->data);
+            node = node->right;
+        }
+    }
+    
+    for(int i: res)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+}
+
 int main()
 {
     //creating a tree
@@ -41,6 +72,10 @@ int main()
     root->right->left = new Node(10);
     //END
     
+    //iterative approach
+    inorder_itr(root);
+    
+    //recursive approach
     inorder(root);
 }
 
