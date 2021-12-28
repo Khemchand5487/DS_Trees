@@ -31,7 +31,7 @@ void postorder(Node *root)
     Time Complexity of below approch: O(2N)
 */
 
-//iterativ approach using 2 stacks
+//iterative approach using 2 stacks
 void postorder_itr1(Node* root)
 {
     if(root==NULL) return;
@@ -61,7 +61,7 @@ void postorder_itr1(Node* root)
     Time Complexity of below approch: O(N)
 */
 
-//iterativ approach using 1 stacks
+//iterative approach using 1 stacks
 void postorder_itr2(Node* root)
 {
     vector<int> res;
@@ -120,10 +120,10 @@ int main()
     root->right->left = new Node(10);
     //END
     
-    //iterativ approach using 2 stacks
+    //iterative approach using 2 stacks
     postorder_itr1(root);
     
-    //iterativ approach using 1 stacks
+    //iterative approach using 1 stacks
     postorder_itr2(root);
     
     //recursive approach
