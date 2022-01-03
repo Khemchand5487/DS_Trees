@@ -1,4 +1,4 @@
-//Top view of a binary tree in c++
+//Bottom view of a binary tree in c++
 
 #include <bits/stdc++.h>
 
